@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #efedd6;
+    font-family: 'Roboto'sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin:0px;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box { 
+    background-color: rgb(89, 100, 243);
+    color: #fff;
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    /* boxes ko hide krne ke liye */
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+/* odd or even ko alag krne ke liye and boxes ko hide krne ke liye  */
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+/* jab show class add hogi tb boxes center mai lane ke liye */
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size:40px;
+}
+
+
